@@ -1,22 +1,30 @@
-# Rainwater Trapping Problem
+Rainwater Trapping
+Problem Description
 
-This project solves the **Rainwater Trapping** problem, where given a list of non-negative integers representing the heights of walls with unit width, the goal is to calculate how much water is retained after it rains.
+This project addresses the problem of calculating how much rainwater can be trapped between walls after rainfall. The walls are represented as a list of non-negative integers, where each integer corresponds to the height of the wall.
 
-## Problem Description
+The challenge is to determine how many square units of water will be retained between the walls after rain, assuming that water is trapped between two higher walls.
+Solution
 
-You are given a list of non-negative integers where each integer represents the height of a wall in a relief map (cross-section view). Each unit in the list has a width of 1. The challenge is to compute how much water will be retained between these walls after rainfall.
+The solution involves:
 
-### Prototype:
+    Calculating the maximum height of the walls on the left and right for each position.
+    Determining the minimum of these two maximum heights.
+    Calculating the water retained by subtracting the height of the current wall from the minimum height.
 
-```python
-def rain(walls):
-    """
-    Calculate the total amount of rainwater retained.
+The total water retained is the sum of the water trapped at each position.
+Example
 
-    Parameters:
-    - walls (List[int]): A list of non-negative integers representing wall heights.
+For the walls [0, 1, 0, 2, 0, 3, 0, 4], the total water retained is 6 units.
 
-    Returns:
-    - int: The total amount of rainwater retained.
-    """
-```
+For the walls [2, 0, 0, 4, 0, 0, 1, 0], the total water retained is also 6 units.
+Usage
+
+To calculate the rainwater retained:
+
+python
+
+from rain import rain
+
+walls = [0, 1, 0, 2, 0, 3, 0, 4]
+print(rain(walls))  # Output: 6
