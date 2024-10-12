@@ -7,8 +7,10 @@ Pascal's triangle of size `n`. The triangle is represented as a list of lists,
 where each list corresponds to a row in the triangle.
 
 Functions:
-    pascal_triangle(n): Returns the Pascal's triangle of `n` as a list of lists.
+    pascal_triangle(n): Returns the Pascal's triangle of `n` as a
+    list of lists.
 """
+
 
 def pascal_triangle(n):
     """Returns a list of lists representing the Pascal's triangle of size n.
@@ -17,7 +19,8 @@ def pascal_triangle(n):
         n (int): The size of the Pascal's triangle.
 
     Returns:
-        list: A list of lists of integers representing the Pascal's triangle of n.
+        list: A list of lists of integers representing the Pascal's 
+        triangle of n.
               An empty list is returned if n <= 0.
     """
     if n <= 0:
