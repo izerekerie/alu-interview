@@ -20,8 +20,7 @@ def pascal_triangle(n):
 
     Returns:
         list: A list of lists of integers representing the Pascal's 
-        triangle of n.
-              An empty list is returned if n <= 0.
+        triangle of n. An empty list is returned if n <= 0.
     """
     if n <= 0:
         return []
